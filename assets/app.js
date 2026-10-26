@@ -31,10 +31,9 @@ const S = {
     h_svc: "What I can build for you",
     sub_svc: "One-off projects, scoped and delivered. I work directly in Roblox Studio — no Rojo or Wally.",
     h_about: "Background",
-    about_p: "I've been scripting on Roblox for two and a half years. I like building things that are meant to grow: modular frameworks, standalone systems and clean interfaces that other people can extend without having to read my mind. I take on one-off projects, with a clear scope and a clear delivery, and I am also open to long-term work.",
+    about_p: "I've been scripting on Roblox for two and a half years. I like building things that are meant to grow: modular frameworks, standalone systems and clean interfaces that other people can extend without having to read my mind. I take on one-off projects, with a clear scope and a clear delivery, and I am also open to long-term work. I adapt to any team and any existing framework.",
     h_contact: "Let's work together",
     sub_contact: "Tell me what you need, your deadline and any references.",
-    more_proof: "Want to see more of my work? I can send more proof without any problem.",
     contact_empty: "Contact links are coming soon.",
     foot: "Available for one-off and long-term projects.",
     d_about: "About", d_includes: "What it includes", d_stack: "Stack", d_links: "Links",
@@ -65,10 +64,9 @@ const S = {
     h_svc: "Lo que puedo construir para ti",
     sub_svc: "Proyectos puntuales, con alcance y entrega claros. Trabajo directamente en Roblox Studio — sin Rojo ni Wally.",
     h_about: "Sobre mí",
-    about_p: "Llevo dos años y medio haciendo scripting en Roblox. Me gusta construir cosas pensadas para crecer: frameworks modulares, sistemas independientes e interfaces limpias que otras personas puedan extender sin tener que adivinar qué pensé. Tomo proyectos puntuales, con un alcance claro y una entrega clara, y también estoy abierto a trabajos a largo plazo.",
+    about_p: "Llevo dos años y medio haciendo scripting en Roblox. Me gusta construir cosas pensadas para crecer: frameworks modulares, sistemas independientes e interfaces limpias que otras personas puedan extender sin tener que adivinar qué pensé. Tomo proyectos puntuales, con un alcance claro y una entrega clara, y también estoy abierto a trabajos a largo plazo. Me adapto a cualquier equipo y a cualquier framework existente.",
     h_contact: "Trabajemos juntos",
     sub_contact: "Cuéntame qué necesitas, tu fecha límite y tus referencias.",
-    more_proof: "¿Necesitas ver más de mi trabajo? Puedo enviarte más pruebas sin problema.",
     contact_empty: "Los enlaces de contacto llegarán pronto.",
     foot: "Disponible para proyectos puntuales y a largo plazo.",
     d_about: "Acerca de", d_includes: "Qué incluye", d_stack: "Stack", d_links: "Enlaces",
@@ -273,7 +271,7 @@ function contactHTML() {
         return '<a class="link" href="' + esc(h) + '" target="_blank" rel="noopener">' + inner + '</a>';
       }).join("") + '</div>'
     : '<p class="empty">' + t("contact_empty") + '</p>';
-  return '<section id="contact"><div class="wrap"><div class="head"><h2>' + t("h_contact") + '</h2><p>' + t("sub_contact") + '</p></div><p class="proof">' + t("more_proof") + '</p>' + links + '</div></section>';
+  return '<section id="contact"><div class="wrap"><div class="head"><h2>' + t("h_contact") + '</h2><p>' + t("sub_contact") + '</p></div>' + links + '</div></section>';
 }
 
 function wireContact() {
