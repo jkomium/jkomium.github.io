@@ -140,7 +140,7 @@ function card(k, it) {
     return '<a class="card" href="' + esc(href(k, it)) + '">' + corners() +
       '<figure>' + media(it) + '<span class="badge">' + PLAY + n + '</span></figure>' +
       '<div class="body"><div class="kind">' + t("kind_" + k) + '</div><h3>' + esc(it.titulo) + '</h3>' +
-      '<p>' + esc(tx(it.desc)) + '</p>' + (it.nota ? '<p class="note">' + esc(tx(it.nota)) + '</p>' : "") + '<span class="open">' + t("view") + '</span></div></a>';
+      '<p>' + esc(tx(it.desc)) + '</p>' + '<span class="open">' + t("view") + '</span></div></a>';
   }
   const label = /roblox\.com/.test(it.link || "") ? t("open_roblox") : t("open_link");
   return '<article class="card hov" tabindex="0">' + corners() +

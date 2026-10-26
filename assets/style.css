@@ -241,5 +241,5 @@ section.dbody{padding:56px 0}
 .price .pay .tools li{background:var(--paper)}
 .price b small.alt{font-size:.5em;color:var(--ink);margin-left:.1em}
 .price .pn.tax{margin-top:4px;color:var(--ink);font-weight:500}
-.card p.note,.dgrid p.note{font-size:.84rem;font-style:italic;color:var(--soft)}
+.dgrid p.note{font-size:.84rem;font-style:italic;color:var(--soft)}
 .dgrid p.note{margin-top:-4px}
