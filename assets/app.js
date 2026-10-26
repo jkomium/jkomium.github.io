@@ -140,7 +140,7 @@ function card(k, it) {
     return '<a class="card" href="' + esc(href(k, it)) + '">' + corners() +
       '<figure>' + media(it) + '<span class="badge">' + PLAY + n + '</span></figure>' +
       '<div class="body"><div class="kind">' + t("kind_" + k) + '</div><h3>' + esc(it.titulo) + '</h3>' +
-      '<p>' + esc(tx(it.desc)) + '</p><span class="open">' + t("view") + '</span></div></a>';
+      '<p>' + esc(tx(it.desc)) + '</p>' + (it.nota ? '<p class="note">' + esc(tx(it.nota)) + '</p>' : "") + '<span class="open">' + t("view") + '</span></div></a>';
   }
   const label = /roblox\.com/.test(it.link || "") ? t("open_roblox") : t("open_link");
   return '<article class="card hov" tabindex="0">' + corners() +
@@ -337,6 +337,7 @@ function renderDetail() {
       (vids.length > 1 ? '<div class="strip" id="strip">' + vids.map((v, i) => thumb(v, i)).join("") + '</div>' : '') +
     '</div></section>' +
     '<section class="dbody"><div class="wrap"><div class="dgrid"><div><h2>' + t("d_about") + '</h2>' + paras(long) +
+      (it.nota ? '<p class="note">' + esc(tx(it.nota)) + '</p>' : "") +
       (it.puntos && it.puntos.length ? '<ul class="incl">' + it.puntos.map(p => '<li>' + esc(tx(p)) + '</li>').join("") + '</ul>' : '') +
     '</div><div class="aside">' + sideBlocks + '</div></div></div></section>' +
     (rels.length ? '<section class="rel"><div class="wrap"><h2>' + t("d_related") + '</h2><div class="grid" id="relgrid">' +

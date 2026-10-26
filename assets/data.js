@@ -160,6 +160,10 @@ window.CONFIG = {
         en: "A custom vehicle chassis built around its own handling and suspension.",
         es: "Un chasis de vehículo propio, construido alrededor de su manejo y su suspensión."
       },
+      nota: {
+        en: "I contributed to building this system; it was not made entirely by me.",
+        es: "Contribuí en la creación de este sistema; no está hecho completamente por mí."
+      },
       videos: [ { t: { en: "Driving", es: "Manejo" }, file: "Juego autos.mp4" } ]
     },
     {
