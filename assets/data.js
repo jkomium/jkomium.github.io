@@ -11,6 +11,7 @@
            Un elemento CON videos tiene página propia.
            Un elemento SIN videos muestra una etiqueta al pasar el mouse
            (descripción + link, si tiene).
+   oculto: true en un elemento lo saca de la página (sigue en el código y se puede volver a mostrar quitando esa línea).
    rel:    ["juegos/id", "sistemas/id"] → elementos relacionados en la página.
    ========================================================================== */
 window.CONFIG = {
@@ -124,6 +125,7 @@ window.CONFIG = {
     },
     {
       id: "run-from-asgore",
+      oculto: true,
       fecha: "2025-10",
       titulo: "Run From Asgore",
       desc: {
@@ -134,6 +136,7 @@ window.CONFIG = {
     },
     {
       id: "escape-from-asgore-simulator",
+      oculto: true,
       fecha: "2025-03",
       titulo: "Escape From Asgore Simulator",
       desc: {
@@ -213,6 +216,7 @@ window.CONFIG = {
     },
     {
       id: "viewmodels",
+      oculto: true,
       fecha: "2026-05",
       titulo: "Viewmodels",
       rol: { en: "Weapon viewmodel framework", es: "Framework de viewmodels de armas" },
@@ -232,6 +236,7 @@ window.CONFIG = {
     },
     {
       id: "parkour",
+      oculto: true,
       fecha: "2026-04",
       titulo: "Parkour",
       rol: { en: "Movement system", es: "Sistema de movimiento" },
@@ -275,6 +280,7 @@ window.CONFIG = {
     },
     {
       id: "dynamo-flashlight",
+      oculto: true,
       fecha: "2025-12",
       titulo: "Dynamo Flashlight",
       rol: { en: "Item mechanic", es: "Mecánica de ítem" },
