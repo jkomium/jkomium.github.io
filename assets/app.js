@@ -37,6 +37,8 @@ const S = {
     d_about: "About", d_includes: "What it includes", d_stack: "Stack", d_links: "Links",
     d_related: "Related", d_cta: "Need something like this?",
     play: "Play video", copied: "Copied", prev: "Previous", next: "Next",
+    price_label: "Minimum hiring price",
+    price_note: "No project below this amount.",
     notfound: "This page doesn't exist."
   },
   es: {
@@ -64,6 +66,8 @@ const S = {
     d_about: "Acerca de", d_includes: "Qué incluye", d_stack: "Stack", d_links: "Enlaces",
     d_related: "Relacionado", d_cta: "¿Necesitas algo así?",
     play: "Reproducir video", copied: "Copiado", prev: "Anterior", next: "Siguiente",
+    price_label: "Precio mínimo de contratación",
+    price_note: "No tomo proyectos por debajo de este monto.",
     notfound: "Esta página no existe."
   }
 };
@@ -235,12 +239,12 @@ function servicesHTML() {
 
 function aboutHTML() {
   return '<section id="about"><div class="wrap"><div class="head"><h2>' + t("h_about") + '</h2></div><p>' + t("about_p") + '</p>' +
-    '<ul class="tools">' + (D.tools || []).map(x => '<li>' + esc(x) + '</li>').join("") + '</ul></div></section>';
+    (D.precioMinimo ? '<div class="price"><span class="pl">' + t("price_label") + '</span><b>$' + D.precioMinimo + ' <small>USD</small></b><span class="pn">' + t("price_note") + '</span></div>' : "") + '</div></section>';
 }
 
 function contactList() {
   const c = D.contacto || {};
-  const defs = [["discord", "Discord"], ["roblox", "Roblox"], ["devforum", "DevForum"], ["youtube", "YouTube"], ["email", "Email"]];
+  const defs = [["discord", "Discord"], ["tiktok", "TikTok"], ["roblox", "Roblox"], ["devforum", "DevForum"], ["youtube", "YouTube"], ["email", "Email"]];
   return defs.filter(d => c[d[0]]).map(d => ({ k: d[0], label: d[1], v: c[d[0]] }));
 }
 function contactHTML() {

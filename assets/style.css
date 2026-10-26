@@ -220,3 +220,11 @@ section.dbody{padding:56px 0}
   .vt{flex:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* precio mínimo de contratación */
+.price{position:relative;margin-top:34px;padding:28px 32px 30px;background:var(--panel);
+  border:1px solid var(--line);border-left:4px solid var(--red);border-radius:var(--r);max-width:720px}
+.price .pl{display:block;font-size:.82rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.price b{display:block;font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(3rem,9vw,5.2rem);line-height:1;letter-spacing:-.03em}
+.price b small{font-size:.32em;letter-spacing:0;color:var(--soft);font-weight:600}
+.price .pn{display:block;margin-top:10px;color:var(--soft);font-size:1rem}

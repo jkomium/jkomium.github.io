@@ -22,8 +22,9 @@ window.CONFIG = {
 
   /* Contacto: dejá vacío lo que no uses y no se muestra. */
   contacto: {
-    discord: "",
-    roblox: "",
+    discord: "jkom1",
+    tiktok: "https://www.tiktok.com/@jkomium1",
+    roblox: "https://www.roblox.com/users/585060/profile",
     devforum: "",
     youtube: "",
     email: ""
@@ -302,6 +303,6 @@ window.CONFIG = {
            es: "DataStores, compras, APIs externas y todo lo que las une." } }
   ],
 
-  /* ---- Herramientas ---- */
-  tools: ["Roblox Studio", "Luau", "WCS", "FastCast", "Trove", "Cmdr", "DataStores", "HTTP APIs"]
+  /* ---- Precio mínimo de contratación (USD) ---- */
+  precioMinimo: 100
 };
