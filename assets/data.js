@@ -47,6 +47,7 @@ window.CONFIG = {
     "Fernan item asylum.mp4": "",
     "NPCs Item asylum.mp4": "",
     "Sistema de dialogo item asylum.mp4": "",
+    "Anticheat.mp4": "",
     "Momos.mp4": "",
     "Juego autos.mp4": "",
     "Coche nashe.mp4": "",
@@ -169,6 +170,21 @@ window.CONFIG = {
       },
       rel: ["juegos/spanish-rumble"],
       videos: [ { t: { en: "In game", es: "En el juego" }, file: "Sistema de dialogo item asylum.mp4" } ]
+    },
+    {
+      id: "anticheat",
+      fecha: "2026-07-15",
+      titulo: "Anticheat",
+      rol: { en: "Anti-exploit", es: "Anti-exploit" },
+      desc: {
+        en: "If it detects any interception of the game's remotes, using a tracer that checks the stack environment, it shows the exploiter their own IP address on their own computer, and sends their username to a webhook so the game is notified about the exploiter.",
+        es: "Si detecta alguna intercepción en los remotos del juego, usando un tracer y revisando el environment del stack, le muestra en su propia computadora al exploiter su dirección IP, y también manda su usuario a un webhook para que se le notifique al juego del exploiter."
+      },
+      long: {
+        en: "If it detects any interception of the game's remotes, using a tracer that checks the stack environment, it shows the exploiter their own IP address on their own computer, and sends their username to a webhook so the game is notified about the exploiter.\n\nBuilt to stop exploiters who don't know how to bypass the client: the ones who just copy and paste whatever they find on Pastebin.",
+        es: "Si detecta alguna intercepción en los remotos del juego, usando un tracer y revisando el environment del stack, le muestra en su propia computadora al exploiter su dirección IP, y también manda su usuario a un webhook para que se le notifique al juego del exploiter.\n\nHecho para frenar a los exploiters que no saben cómo bypassear el cliente: los que solo hacen copy paste de cualquier pastebin que ven."
+      },
+      videos: [ { t: { en: "Demo", es: "Demo" }, file: "Anticheat.mp4" } ]
     },
     {
       id: "face-censor",
