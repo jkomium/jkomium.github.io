@@ -41,6 +41,7 @@ const S = {
     play: "Play video", copied: "Copied", prev: "Previous", next: "Next",
     price_label: "Minimum hiring price",
     price_note: "No project below this amount.",
+    pay_label: "Accepted payment methods",
     notfound: "This page doesn't exist."
   },
   es: {
@@ -72,6 +73,7 @@ const S = {
     play: "Reproducir video", copied: "Copiado", prev: "Anterior", next: "Siguiente",
     price_label: "Precio mínimo de contratación",
     price_note: "No tomo proyectos por debajo de este monto.",
+    pay_label: "Métodos de pago disponibles",
     notfound: "Esta página no existe."
   }
 };
@@ -247,7 +249,9 @@ function servicesHTML() {
 
 function aboutHTML() {
   return '<section id="about"><div class="wrap"><div class="head"><h2>' + t("h_about") + '</h2></div><p>' + t("about_p") + '</p>' +
-    (D.precioMinimo ? '<div class="price"><span class="pl">' + t("price_label") + '</span><b>$' + D.precioMinimo + ' <small>USD</small></b><span class="pn">' + t("price_note") + '</span></div>' : "") + '</div></section>';
+    (D.precioMinimo ? '<div class="price"><span class="pl">' + t("price_label") + '</span><b>$' + D.precioMinimo + ' <small>USD</small></b><span class="pn">' + t("price_note") + '</span>' +
+      ((D.pagos || []).length ? '<div class="pay"><span class="pl">' + t("pay_label") + '</span><ul class="tools">' + D.pagos.map(x => '<li>' + esc(x) + '</li>').join("") + '</ul></div>' : "") +
+      '</div>' : "") + '</div></section>';
 }
 
 function contactList() {

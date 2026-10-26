@@ -235,3 +235,7 @@ section.dbody{padding:56px 0}
 .stats b .live::after{content:"";position:absolute;inset:0;border-radius:50%;background:#22A559;
   animation:live 3.6s ease-out infinite}
 @keyframes live{0%{transform:scale(1);opacity:.55}30%,100%{transform:scale(3.2);opacity:0}}
+.price .pay{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.price .pay .pl{margin-bottom:12px}
+.price .pay .tools{margin:0}
+.price .pay .tools li{background:var(--paper)}
