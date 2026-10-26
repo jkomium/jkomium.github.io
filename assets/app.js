@@ -72,7 +72,8 @@ const S = {
   }
 };
 let lang = "en";
-try { const l = localStorage.getItem("lang"); if (l === "es" || l === "en") lang = l; } catch (e) {}
+/* siempre inglés al entrar; el cambio a ES vale solo durante la visita (pestaña actual) */
+try { localStorage.removeItem("lang"); const l = sessionStorage.getItem("lang"); if (l === "es" || l === "en") lang = l; } catch (e) {}
 const t = k => (S[lang][k] != null ? S[lang][k] : S.en[k]) || "";
 const tx = v => v == null ? "" : (typeof v === "string" ? v : (v[lang] || v.en || v.es || ""));
 const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
@@ -200,7 +201,7 @@ function chrome() {
     '<button class="lang" id="lang">' + (lang === "en" ? "ES" : "EN") + '</button></div>';
   document.getElementById("lang").onclick = () => {
     lang = lang === "en" ? "es" : "en";
-    try { localStorage.setItem("lang", lang); } catch (e) {}
+    try { sessionStorage.setItem("lang", lang); } catch (e) {}
     renderAll();
   };
   document.getElementById("foot").innerHTML =
