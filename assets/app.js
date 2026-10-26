@@ -17,6 +17,8 @@ const S = {
     nav_services: "Services", nav_about: "About", nav_contact: "Contact",
     role: "Roblox scripter. I build <b>complete game frameworks, standalone systems and interfaces</b> — modular, optimized and made to be extended.",
     cta_hire: "Start a project", cta_work: "See the work",
+    stat_avail: "Available", stat_avail_sub: "for new projects",
+    stat_tz: "GMT -3", stat_tz_sub: "Argentina",
     stat_years: "years as a scripter",
     h_juegos: "Games", sub_juegos: "Complete games I've built and scripted.",
     h_sistemas: "Systems", sub_sistemas: "Standalone systems that drop into any game.",
@@ -46,6 +48,8 @@ const S = {
     nav_services: "Servicios", nav_about: "Sobre mí", nav_contact: "Contacto",
     role: "Scripter de Roblox. Construyo <b>frameworks de juegos completos, sistemas independientes e interfaces</b> — modulares, optimizados y hechos para extenderse.",
     cta_hire: "Empezar un proyecto", cta_work: "Ver los trabajos",
+    stat_avail: "Disponible", stat_avail_sub: "para nuevos proyectos",
+    stat_tz: "GMT -3", stat_tz_sub: "Argentina",
     stat_years: "años como scripter",
     h_juegos: "Juegos", sub_juegos: "Juegos completos que construí y programé.",
     h_sistemas: "Sistemas", sub_sistemas: "Sistemas independientes que se integran a cualquier juego.",
@@ -222,7 +226,10 @@ function heroHTML() {
     '<h1>' + esc(D.nombre) + '</h1><p class="role">' + t("role") + '</p>' +
     '<div class="cta"><a class="btn btn-solid" href="#contact">' + t("cta_hire") + '</a>' +
     '<a class="btn btn-ghost" href="#' + (SECS.find(k => items(k).length) || "services") + '">' + t("cta_work") + '</a></div>' +
-    '<div class="stats"><div><b>2.5</b><span>' + t("stat_years") + '</span></div></div></div>' +
+    '<div class="stats">' +
+      '<div><b><i class="live" aria-hidden="true"></i>' + t("stat_avail") + '</b><span>' + t("stat_avail_sub") + '</span></div>' +
+      '<div><b>' + t("stat_tz") + '</b><span>' + t("stat_tz_sub") + '</span></div>' +
+      '<div><b>2.5</b><span>' + t("stat_years") + '</span></div></div></div>' +
     '<div class="av"><i class="handle h1"></i><i class="handle h2"></i><i class="handle h3"></i><i class="handle h4"></i>' +
     '<span class="av-tag">' + esc(D.nombre) + '</span><div class="av-frame">' + img + '</div></div></div></div>';
 }

@@ -228,3 +228,10 @@ section.dbody{padding:56px 0}
 .price b{display:block;font-family:"Archivo",sans-serif;font-weight:800;font-size:clamp(3rem,9vw,5.2rem);line-height:1;letter-spacing:-.03em}
 .price b small{font-size:.32em;letter-spacing:0;color:var(--soft);font-weight:600}
 .price .pn{display:block;margin-top:10px;color:var(--soft);font-size:1rem}
+
+/* indicador de disponibilidad: punto verde con un latido lento */
+.stats b .live{position:relative;display:inline-block;width:11px;height:11px;margin-right:9px;border-radius:50%;
+  background:#22A559;vertical-align:.12em}
+.stats b .live::after{content:"";position:absolute;inset:0;border-radius:50%;background:#22A559;
+  animation:live 3.6s ease-out infinite}
+@keyframes live{0%{transform:scale(1);opacity:.55}30%,100%{transform:scale(3.2);opacity:0}}
