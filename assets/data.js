@@ -321,6 +321,7 @@ window.CONFIG = {
 
   /* ---- Precio mínimo de contratación (USD) ---- */
   precioMinimo: 100,
+  precioRobux: "30k",
 
   /* ---- Métodos de pago (se muestran debajo del precio) ---- */
   pagos: ["PayPal", "Robux", "MercadoPago", "Crypto"]

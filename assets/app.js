@@ -42,6 +42,7 @@ const S = {
     price_label: "Minimum hiring price",
     price_note: "No project below this amount.",
     pay_label: "Accepted payment methods",
+    tax_note: "Taxes and payment fees are covered by the client.",
     notfound: "This page doesn't exist."
   },
   es: {
@@ -74,6 +75,7 @@ const S = {
     price_label: "Precio mínimo de contratación",
     price_note: "No tomo proyectos por debajo de este monto.",
     pay_label: "Métodos de pago disponibles",
+    tax_note: "Los impuestos y comisiones de pago los cubre el cliente.",
     notfound: "Esta página no existe."
   }
 };
@@ -249,7 +251,7 @@ function servicesHTML() {
 
 function aboutHTML() {
   return '<section id="about"><div class="wrap"><div class="head"><h2>' + t("h_about") + '</h2></div><p>' + t("about_p") + '</p>' +
-    (D.precioMinimo ? '<div class="price"><span class="pl">' + t("price_label") + '</span><b>$' + D.precioMinimo + ' <small>USD</small></b><span class="pn">' + t("price_note") + '</span>' +
+    (D.precioMinimo ? '<div class="price"><span class="pl">' + t("price_label") + '</span><b>$' + D.precioMinimo + ' <small>USD</small>' + (D.precioRobux ? ' <small class="alt">/ ' + esc(D.precioRobux) + ' Robux</small>' : "") + '</b><span class="pn">' + t("price_note") + '</span><span class="pn tax">' + t("tax_note") + '</span>' +
       ((D.pagos || []).length ? '<div class="pay"><span class="pl">' + t("pay_label") + '</span><ul class="tools">' + D.pagos.map(x => '<li>' + esc(x) + '</li>').join("") + '</ul></div>' : "") +
       '</div>' : "") + '</div></section>';
 }
